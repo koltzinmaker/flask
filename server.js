@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 app.post('/cadastro', validar, (req, res) => {
     res.json({mensagem: "paciente cadastrado com sucesso"});
